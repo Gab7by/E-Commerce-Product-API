@@ -1,11 +1,6 @@
 from django.db import models 
 
-class User(models.Model):
-    username = models.CharField(max_length=300, unique=True, blank=True, null=True)
-    email = models.EmailField(unique=True)
-    password = models.CharField(max_length=200)
-    
-    
+
 class Product(models.Model):
     name = models.CharField(max_length=255, default= "Unkown product")
     description = models.TextField(blank=True, null=True)
